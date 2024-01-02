@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background: #94e5b8;
+}
+
+:root {
+  --text-color: rgb(0, 0, 0);
+  --bg-url: url(./assets/assets/plano_de_fundo.png);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(225, 225, 225, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(225, 225, 225, 0.2);
+  
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/assets/plano_de_fundo.png);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.01);
+ 
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 120vh;
+}
+
+body * {
+  font-family: "Inter Tiger", 'CENTURY-GOTHIC', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 16px auto 0px;
+  padding: 0px;
+}
+/*profile*/
+#profile {
+  text-align: center;
+  padding: 0px;
+}
+
+#profile img {
+  width: 360px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*links*/
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 50px 0;
+}
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8%;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+/*pseudo-selector*/
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/*Social links*/
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  gap: 16px;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+footer {
+  padding: 0px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/assets/plano_de_fundo.png);
+  }
+
+  .light {
+    --bg-url: url(./assets/assets/plano_de_fundo.png);
+  }
+}
+
+/*animations*/
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slide-back{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
+}
+
